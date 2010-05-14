@@ -1,0 +1,30 @@
+<%= render :partial => "titulo" %>
+<h1>Listagem de restaurantes</h1>
+
+	<table>
+		<tr>
+			<th>
+				Nome
+			</th>
+			<th>
+				Endereco
+         </th>
+			<th>
+				Especialidade
+         </th>
+		</tr>
+		<% for r in @restaurantes %>
+			<tr>
+				<td><%=h r.nome %> </td>
+				<td><%=h r.endereco %></td>
+				<td><%=h r.especialidade %></td>
+				<td><%= link_to 'show', {:action =>"show", :id=>r} %></td>
+				<td><%= link_to 'edit', {:action =>"edit", :id=>r} %></td>
+				<td><%= link_to 'destroy', {:action =>"destroy", :id=>r} %></td>
+			</tr>
+		
+		<% end %>
+	</table>
+	
+	<br/>
+	<%= link_to "new", {:action => "new" } %>

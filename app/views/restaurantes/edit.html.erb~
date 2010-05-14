@@ -1,0 +1,12 @@
+<h1>Editando </h1>
+<%= error_messages_for :restaurante %>
+
+<% form_for :restaurante, :url => {:action =>"update", :id=>@restaurante} do |f| %>
+	<%= f.text_field :nome , :size => 100 %>
+			<%= f.text_field :endereco , :size => 100 %>
+			<%= f.text_field :especialidade , :size => 100 %>	
+				
+			<%= submit_tag "Atualizar" %>
+
+
+<% end %>

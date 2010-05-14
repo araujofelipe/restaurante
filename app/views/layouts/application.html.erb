@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>qualificação de restaurante</title>
+			<%= stylesheet_link_tag 'scaffold' %>
+			<%= javascript_include_tag :all %>
+	</head>
+	<body>
+		<%= menu_principal %>
+		
+			<p style="color:green"><%= flash[:notice] %> </p>
+			 <%= yield %>
+			 <%= italianos_url %>
+			 <%= italianos_path %>
+			 
+	</body>
+</html>
